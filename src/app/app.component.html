@@ -1,2 +1,86 @@
+<app-theme></app-theme>
+
+<section>
+    <div class="example-label">Basic</div>
+    <div class="example-button-row">
+      <button mat-button>Basic</button>
+      <button mat-button disabled>Disabled</button>
+      <a mat-button href="" target="">Link</a>
+    </div>
+  </section>
+  <mat-divider></mat-divider>
+  <section>
+    <div class="example-label">Raised</div>
+    <div class="example-button-row">
+      <button mat-raised-button>Basic</button>
+      <button mat-raised-button disabled>Disabled</button>
+      <a mat-raised-button href="" target="">Link</a>
+    </div>
+  </section>
+  <mat-divider></mat-divider>
+
+
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary menu-nav" data-bs-theme="dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">SJ</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="home" routerLinkActive="router-link-active">Home</a>
+                </li>
+                <!-- <li class="nav-item">
+                    <a class="nav-link" routerLink="about" routerLinkActive="router-link-active">About me</a>
+                </li> -->
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="projects" routerLinkActive="router-link-active">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="contact" routerLinkActive="router-link-active">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container fixed-bottom menu-tabs">
+    <mat-tab-group (selectedTabChange)="onTabChange($event)" >
+        <mat-tab>
+          <ng-template mat-tab-label>
+            <div class="tab-label-content">
+                <mat-icon class="example-tab-icon">home</mat-icon>
+                <span> Home</span>
+            </div>
+          </ng-template>
+          <!-- Content 1 -->
+        </mat-tab>
+      
+        <mat-tab>
+          <ng-template mat-tab-label>
+            <div class="tab-label-content">
+                <mat-icon class="example-tab-icon">folder</mat-icon>
+                <span>Projects</span>
+            </div>
+          </ng-template>
+          <!-- Content 2 -->
+        </mat-tab>
+      
+        <mat-tab>
+          <ng-template mat-tab-label>
+            <div class="tab-label-content">
+                <mat-icon class="example-tab-icon">contacts-product</mat-icon>
+                <span>Contact</span>
+            </div>
+          </ng-template>
+      
+          <!-- Content 3 -->
+        </mat-tab>
+      </mat-tab-group>      
+</div>
+
 
 <router-outlet />
